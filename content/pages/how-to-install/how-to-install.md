@@ -1,44 +1,11 @@
-<img src = "cis-logo.png">
-# Share-CI-Library
-This repository is for libraries sharing from any researchers worldwide involving with Computational Intelligence.
-Hope this helps.
+---
+title: How to install
+slug: how-to-install
+cover: ./cover.png
+disqus: true
+---
 
-[![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew) [![Netlify Status](https://api.netlify.com/api/v1/badges/d68027bd-19b5-44fd-a2a3-d1f05fc8201e/deploy-status)](https://app.netlify.com/sites/gatsby-starter-morning-dew/deploys) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Maintainability](https://api.codeclimate.com/v1/badges/e09f1ac1a5cdb2987a6f/maintainability)](https://codeclimate.com/github/maxpou/gatsby-starter-morning-dew/maintainability) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-
-
-# gatsby-starter-morning-dew
-
-:rocket: A gatsby-starter-morning-dew is a Gatsby starter to build lightning-fast websites!  
-:dizzy: You can also use gatsby-starter-morning-dew as a Gatsby Theme
-
-[Demo website.](https://maxpou.github.io/gatsby-starter-morning-dew/)
-
-![screenshot](https://i.imgur.com/Tv4SFqT.png)
-
-## Features
-
-- [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
-- :mag: SEO optimized
-- :love_letter: Write posts/pages in Markdown or [MDX](https://mdxjs.com/)
-  - :art: Code syntax highlight
-  - :books: Multilang support (blog post)
-- :iphone: Mobile Friendly (Responsive design)
-- :sparkles: PWA ready
-  - :airplane: Offline support
-  - :page_with_curl: Manifest support 
-- [:wrench: Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
-- :speech_balloon: Disqus support
-- :nail_care: css-in-js (with [styled-components v4](https://www.styled-components.com))
-- :bookmark: Groups post with tags
-- :bar_chart: Google Analytics support
-- :bird: post preview image generation (Twitter, Facebook)
-- :gem: Developer tools:
-  - eslint
-  - prettier
-- :construction_worker: Travis CI support
-
-
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)
+👋 Welcome on **gatsby-starter-morning-dew** starter template and theme!
 
 ## Installation (starter)
 
@@ -58,7 +25,6 @@ npm install
 ```
 
 Then run `npm run develop` to try it locally.
-
 
 ## Installation (theme)
 
@@ -99,29 +65,9 @@ Need more details? Checkout:
 * [maxpou.fr source](https://github.com/maxpou/maxpou.fr): Maxence Poutord's personnal blog;
 * [gatsby-groot source](https://github.com/maxpou/gatsby-groot/): a minimalist blog that use this template!
 
+## Customisation
 
-## Commands
-
-```sh
-# working locally
-npm run dev
-
-# generate build
-npm run build
-
-# format code
-npm run format
-
-# lint code
-npm run lint
-
-# Generate generate post preview images (npm run dev need to run before)
-npm run generatePostPreviewImages
-```
-
-**:warning: Add `--prefix-paths` if you are using path prefix!**
-
-## Configure
+In `data/siteConfig.js`, you should have the following file structure:
 
 ```js
 module.exports = {
@@ -150,7 +96,7 @@ module.exports = {
   postsPerPage: 6,
   disqusShortname: 'maxpou',
   headerTitle: 'gatsby-starter-morning-dew',
-  headerLinksIcon: 'baymax.png', // file in content/images (leave empty to disable: '')
+  headerLinksIcon: 'baymax.png', //  (leave empty to disable: '')
   headerLinks: [
     {
       label: 'Blog',
@@ -207,4 +153,47 @@ module.exports = {
     },
   ],
 }
+```
+
+
+## FAQ (Theme): How do I ...
+
+* Change a specific components?  
+👉 See [Component Shadowing (on gatsbyjs.org)](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/).
+  
+* Override the [default colors](https://github.com/maxpou/gatsby-starter-morning-dew/blob/master/src/tokens/colors.js)?  
+👉[Check how gatsby-groot extended default colors](https://github.com/maxpou/gatsby-groot/blob/master/src/gatsby-starter-morning-dew/theme.js).
+  
+* More questions? Find a bug?  
+👉Feel free to [open an issue](https://github.com/maxpou/gatsby-starter-morning-dew/issues/new)!  
+👉You can also [ping me on Twitter](https://twitter.com/_maxpou).  
+
+
+## Markdown headers (for posts)
+
+```yaml
+---
+title: "My blog post title"
+# Slug (www.site.com/my-blog-post)
+slug: my-blog-post
+
+# Date of publication
+date: 2018-10-30
+
+# Language (FR or EN)
+language: en
+
+# Relative path to cover image
+cover: ./cover-balloons.jpg
+
+# use generated Twitter/etc. cards
+imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
+imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+# ... or if you want to skip the generation
+generate-card: false
+
+# Tags
+tags:
+  - gatsby
+---
 ```
