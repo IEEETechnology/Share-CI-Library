@@ -62,7 +62,7 @@ const PostsListItem = props => {
       <PostHeader>
         <h2>
           <PostTitleLink to={`/${slug}`}>
-            {multilangPosts && <Flag language={language} />}
+            {/* {multilangPosts && <Flag language={language} />} */}
             {title}
           </PostTitleLink>
         </h2>
