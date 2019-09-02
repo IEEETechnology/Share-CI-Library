@@ -2,7 +2,7 @@
 title: "About Share CI Library"
 slug: about-share-ci-library
 cover: ./gatsby-cover.png
-disqus: true
+disqus: false
 ---
 
 ## Share CI Library
