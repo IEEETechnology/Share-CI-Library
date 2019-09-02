@@ -31,6 +31,10 @@ module.exports = {
       url: "/"
     },
     {
+      label: "Repositories",
+      url: "/repositories"
+    },
+    {
       label: "About",
       url: "/about-share-ci-library"
     }
@@ -51,6 +55,10 @@ module.exports = {
         {
           label: "Blog",
           url: "/"
+        },
+        {
+          label: "Repositories",
+          url: "/repositories"
         },
         {
           label: "About",

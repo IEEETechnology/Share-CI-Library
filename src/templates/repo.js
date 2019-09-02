@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Project from "../components/Project";
+import Projects from "../components/Projects/Projects";
 import Wrapper from "../components/Wrapper";
 import Hero from "../components/Hero";
 import SEO from "../components/SEO";
@@ -23,20 +23,8 @@ export default props => {
         heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
         title={page.frontmatter.title}
       />
-      <Wrapper>
-        {/* <article> */}
-        <Project content={page.body} date={page.frontmatter.date} />
-        {/* </article> */}
+      <Projects projects={page.frontmatter.projects} />
 
-        {page.frontmatter.projects.map(project => {
-          const props = {
-            title: project.title,
-            description: project.description
-          };
-          return `${props.title} | ${props.description}`;
-          // return <PostsListItem key={props.slug} {...props} />;
-        })}
-      </Wrapper>
       {/* {page.frontmatter.disqus && (
         <Wrapper>
           <Disqus slug={page.frontmatter.slug} title={page.frontmatter.title} />
@@ -62,6 +50,7 @@ export const pageQuery = graphql`
         projects {
           title
           description
+          url
         }
       }
     }

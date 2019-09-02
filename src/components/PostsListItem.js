@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import Flag from "./Flag/Flag";
+// import Flag from "./Flag/Flag";
 import TagList from "./TagList";
-import useSiteMetadata from "../hooks/use-site-config";
+// import useSiteMetadata from "../hooks/use-site-config";
 import styled from "styled-components";
 import { colors } from "../tokens";
 
