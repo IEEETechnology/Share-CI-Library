@@ -1,18 +1,18 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper'
-import Hero from '../components/Hero'
-import Article from '../components/Article'
-import PrevNextPost from '../components/PrevNextPost'
-import SEO from '../components/SEO'
-import Disqus from '../components/Disqus'
+import Layout from "../components/layout";
+import Wrapper from "../components/Wrapper";
+import Hero from "../components/Hero";
+import Article from "../components/Article";
+import PrevNextPost from "../components/PrevNextPost";
+import SEO from "../components/SEO";
+// import Disqus from "../components/Disqus";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.post
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.post;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location}>
@@ -41,15 +41,15 @@ class BlogPostTemplate extends React.Component {
         </Wrapper>
 
         <Wrapper>
-          <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
+          {/* <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} /> */}
           <PrevNextPost previous={previous} next={next} />
         </Wrapper>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -74,4 +74,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
