@@ -31,10 +31,6 @@ module.exports = {
       url: "/"
     },
     {
-      label: "Repositories",
-      url: "/repositories"
-    },
-    {
       label: "About",
       url: "/about-share-ci-library"
     }
