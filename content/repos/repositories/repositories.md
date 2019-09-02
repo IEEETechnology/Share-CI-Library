@@ -3,6 +3,11 @@ title: Repositories
 slug: repositories
 cover: ./cover.png
 disqus: false
+projects:
+  - title: Example project 1
+    description: This is an example of description of project 1
+  - title: Example project 2
+    description: This is an example of description of project 2
 ---
 
 👋 Welcome on **gatsby-starter-morning-dew** starter template and theme!

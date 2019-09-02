@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Content from "../components/Content";
+import Project from "../components/Project";
 import Wrapper from "../components/Wrapper";
 import Hero from "../components/Hero";
 import SEO from "../components/SEO";
@@ -24,10 +24,18 @@ export default props => {
         title={page.frontmatter.title}
       />
       <Wrapper>
-        THIS IS WHERE REPOS PLACED
-        <article>
-          <Content content={page.body} date={page.frontmatter.date} />
-        </article>
+        {/* <article> */}
+        <Project content={page.body} date={page.frontmatter.date} />
+        {/* </article> */}
+
+        {page.frontmatter.projects.map(project => {
+          const props = {
+            title: project.title,
+            description: project.description
+          };
+          return `${props.title} | ${props.description}`;
+          // return <PostsListItem key={props.slug} {...props} />;
+        })}
       </Wrapper>
       {/* {page.frontmatter.disqus && (
         <Wrapper>
@@ -50,6 +58,10 @@ export const pageQuery = graphql`
         disqus
         cover {
           publicURL
+        }
+        projects {
+          title
+          description
         }
       }
     }
