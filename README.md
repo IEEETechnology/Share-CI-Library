@@ -7,9 +7,16 @@ Hope this helps.
 
 In the case that you want to contribute to this website, please see [Contribution Guidelines](docs/CONTRIBUTING.md).
 
+## Requirements
+
+- [NodeJS 10.x.x LTS](https://nodejs.org/en/)
+
 ## Commands
 
 ```sh
+# download the package dependencies
+npm install
+
 # working locally
 npm run dev
 
