@@ -1,6 +1,11 @@
 # Share-CI-Library
+
 This repository is for libraries sharing from any researchers worldwide involving with Computational Intelligence.
 Hope this helps.
+
+## Contribution
+
+In the case that you want to contribute to this website, please see [Contribution Guidelines](docs/CONTRIBUTING.md).
 
 ## Commands
 
