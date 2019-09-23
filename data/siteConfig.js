@@ -12,7 +12,7 @@ module.exports = {
   siteUrl: "https://cis.ieee.org/",
   disqusSiteUrl: "",
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
-  pathPrefix: "/ieeecis", // Note: it must *not* have a trailing slash.
+  pathPrefix: "/Share-CI-Library", // Note: it must *not* have a trailing slash.
   siteCover: "iStock-942607194.jpg", // file in content/images
   googleAnalyticsId: "",
   background_color: "#ffffff",

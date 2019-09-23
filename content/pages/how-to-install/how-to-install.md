@@ -9,14 +9,14 @@ disqus: true
 
 ## Installation (starter)
 
-* with Gatsby-cli: 
-  
+- with Gatsby-cli:
+
 ```bash
 npm install --global gatsby-cli
 gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
 ```
 
-* without Gatsby-cli
+- without Gatsby-cli
 
 ```bash
 git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
@@ -31,39 +31,44 @@ Then run `npm run develop` to try it locally.
 You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/)!
 
 1. Add the theme
-  ```bash
-  npm install gatsby-starter-morning-dew
-  ```
+
+```bash
+npm install gatsby-starter-morning-dew
+```
+
 2. In your `gatsby-config.js`, add:
-  ```js
-  const config = require('./data/siteConfig')
-  // ...
-  plugins: [
-      {
-        resolve: "gatsby-starter-morning-dew",
-        options: {},
+
+```js
+const config = require('./data/siteConfig')
+// ...
+plugins: [
+    {
+      resolve: "gatsby-starter-morning-dew",
+      options: {},
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        start_url: config.pathPrefix,
+        background_color: config.background_color,
+        theme_color: config.theme_color,
+        display: config.display,
+        icon: 'content/images/company-icon.png', // path to your image
       },
-      {
-        resolve: `gatsby-plugin-manifest`,
-        options: {
-          name: config.siteTitle,
-          short_name: config.siteTitle,
-          start_url: config.pathPrefix,
-          background_color: config.background_color,
-          theme_color: config.theme_color,
-          display: config.display,
-          icon: 'content/images/company-icon.png', // path to your image
-        },
-      },
-  ],
-  ```
+    },
+],
+```
+
 3. Add an image called `baymax.png` in `content/images/baymax.png`.  
-🐞This is due to a bug.  
-😬 Don't worry, this picture will not appear on your website!
+   🐞This is due to a bug.  
+   😬 Don't worry, this picture will not appear on your website!
 
 Need more details? Checkout:
-* [maxpou.fr source](https://github.com/maxpou/maxpou.fr): Maxence Poutord's personnal blog;
-* [gatsby-groot source](https://github.com/maxpou/gatsby-groot/): a minimalist blog that use this template!
+
+- [maxpou.fr source](https://github.com/maxpou/maxpou.fr): Maxence Poutord's personnal blog;
+- [gatsby-groot source](https://github.com/maxpou/gatsby-groot/): a minimalist blog that use this template!
 
 ## Customisation
 
@@ -71,11 +76,11 @@ In `data/siteConfig.js`, you should have the following file structure:
 
 ```js
 module.exports = {
-  siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
-  authorName: 'Maxence Poutord',
-  twitterUsername: '_maxpou',
-  authorAvatar: 'avatar.jpeg', // file in content/images
+  siteTitle: "gatsby-starter-morning-dew",
+  siteDescription: "A Gatsby theme/starter to build lightning-fast websites",
+  authorName: "Maxence Poutord",
+  twitterUsername: "_maxpou",
+  authorAvatar: "avatar.jpeg", // file in content/images
   multilangPosts: true, // enable/disable flags in post lists
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
@@ -83,91 +88,87 @@ module.exports = {
   As a new digital nomad, he is living where the WIFI and sun is 😎 <br>
   Do you want to know more? <a href="https://www.maxpou.fr/about" target="_blank">Visit my website!</a>
   `,
-  siteUrl: 'https://maxpou.github.io/',
-  disqusSiteUrl: 'https://www.maxpou.fr/',
+  siteUrl: "https://maxpou.github.io/",
+  disqusSiteUrl: "https://www.maxpou.fr/",
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
-  pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
-  siteCover: 'cover-baymax.jpeg', // file in content/images
-  googleAnalyticsId: 'UA-67868977-1',
-  background_color: '#ffffff',
-  theme_color: '#222222',
-  display: 'standalone',
-  icon: 'content/images/baymax.png',
+  pathPrefix: "/gatsby-starter-morning-dew", // Note: it must *not* have a trailing slash.
+  siteCover: "cover-baymax.jpeg", // file in content/images
+  googleAnalyticsId: "UA-67868977-1",
+  background_color: "#ffffff",
+  theme_color: "#222222",
+  display: "standalone",
+  icon: "content/images/baymax.png",
   postsPerPage: 6,
-  disqusShortname: 'maxpou',
-  headerTitle: 'gatsby-starter-morning-dew',
-  headerLinksIcon: 'baymax.png', //  (leave empty to disable: '')
+  disqusShortname: "maxpou",
+  headerTitle: "gatsby-starter-morning-dew",
+  headerLinksIcon: "baymax.png", //  (leave empty to disable: '')
   headerLinks: [
     {
-      label: 'Blog',
-      url: '/',
+      label: "Blog",
+      url: "/"
     },
     {
-      label: 'About',
-      url: '/about-gatsby-starter-morning-dew',
+      label: "About",
+      url: "/about-gatsby-starter-morning-dew"
     },
     {
-      label: 'Installation',
-      url: '/how-to-install',
-    },
+      label: "Installation",
+      url: "/how-to-install"
+    }
   ],
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
-    name: 'GitHub',
-    url: 'https://github.com',
+    name: "GitHub",
+    url: "https://github.com"
   },
   footerLinks: [
     {
-      sectionName: 'Explore',
+      sectionName: "Explore",
       links: [
         {
-          label: 'Blog',
-          url: '/',
+          label: "Blog",
+          url: "/"
         },
         {
-          label: 'About',
-          url: '/about-gatsby-starter-morning-dew',
+          label: "About",
+          url: "/about-gatsby-starter-morning-dew"
         },
         {
-          label: 'Installation',
-          url: '/how-to-install',
-        },
-      ],
+          label: "Installation",
+          url: "/how-to-install"
+        }
+      ]
     },
     {
-      sectionName: 'Follow the author',
+      sectionName: "Follow the author",
       links: [
         {
-          label: 'Github',
-          url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
+          label: "Github",
+          url: "https://github.com/maxpou/gatsby-starter-morning-dew"
         },
         {
-          label: 'Website',
-          url: 'https://www.maxpou.fr',
+          label: "Website",
+          url: "https://www.maxpou.fr"
         },
         {
-          label: 'Twitter',
-          url: 'https://twitter.com/_maxpou',
-        },
-      ],
-    },
-  ],
-}
+          label: "Twitter",
+          url: "https://twitter.com/_maxpou"
+        }
+      ]
+    }
+  ]
+};
 ```
-
 
 ## FAQ (Theme): How do I ...
 
-* Change a specific components?  
-👉 See [Component Shadowing (on gatsbyjs.org)](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/).
-  
-* Override the [default colors](https://github.com/maxpou/gatsby-starter-morning-dew/blob/master/src/tokens/colors.js)?  
-👉[Check how gatsby-groot extended default colors](https://github.com/maxpou/gatsby-groot/blob/master/src/gatsby-starter-morning-dew/theme.js).
-  
-* More questions? Find a bug?  
-👉Feel free to [open an issue](https://github.com/maxpou/gatsby-starter-morning-dew/issues/new)!  
-👉You can also [ping me on Twitter](https://twitter.com/_maxpou).  
-
+- Change a specific components?  
+  👉 See [Component Shadowing (on gatsbyjs.org)](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/).
+- Override the [default colors](https://github.com/maxpou/gatsby-starter-morning-dew/blob/master/src/tokens/colors.js)?  
+  👉[Check how gatsby-groot extended default colors](https://github.com/maxpou/gatsby-groot/blob/master/src/gatsby-starter-morning-dew/theme.js).
+- More questions? Find a bug?  
+  👉Feel free to [open an issue](https://github.com/maxpou/gatsby-starter-morning-dew/issues/new)!  
+  👉You can also [ping me on Twitter](https://twitter.com/_maxpou).
 
 ## Markdown headers (for posts)
 
@@ -196,4 +197,5 @@ generate-card: false
 tags:
   - gatsby
 ---
+
 ```
