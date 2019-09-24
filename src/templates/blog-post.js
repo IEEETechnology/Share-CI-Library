@@ -65,12 +65,6 @@ export const pageQuery = graphql`
         cover {
           publicURL
         }
-        imageTw {
-          publicURL
-        }
-        imageFb {
-          publicURL
-        }
       }
     }
   }

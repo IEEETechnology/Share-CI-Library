@@ -3,7 +3,7 @@ title: "Welcome to Share CI Library"
 slug: welcome-to-share-ci-library
 date: 2019-09-06
 language: en
-cover: ./cover.jpg
+cover: ./cover.png
 generate-card: false
 tags:
   - general
